@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular TODO</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="Ctrl">
+	<h1>Try to do smth:</h1>
+	<form>
+		<input type="text" ng-model="inputValue"/>
+		<button ng-click="addTask()">Add</button>
+	</form>
+	<div>
+		<p ng-repeat="task in tasks">{{task}} <button ng-click="deleteTask(task)">Delete</button></p>
+	</div>
+</body>
+</html>
