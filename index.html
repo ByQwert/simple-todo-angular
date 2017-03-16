@@ -13,7 +13,7 @@
 		<button ng-click="addTask()">Add</button>
 	</form>
 	<div>
-		<p ng-repeat="task in tasks">{{task}} <button ng-click="deleteTask(task)">Delete</button></p>
+		<p ng-repeat="task in tasks track by $index">{{task}} <button ng-click="deleteTask(task)">Delete</button></p>
 	</div>
 </body>
 </html>
